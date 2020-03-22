@@ -33,8 +33,6 @@ def rounding_int(n):
 
 def processing_file(data):
     
-    
-    
     data_column = []
     for columns in data[1:]:    
         date_received = columns[0]
