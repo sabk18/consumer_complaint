@@ -8,47 +8,55 @@ Created on Tue Mar 17 23:55:53 2020
 
 
 #import all required libraries:
-
+#######################
 import csv
-import os 
 import sys
 import math
 import collections
+import unittest 
 
-#################
-#define path
+########################
 
-#path = '/Users/sabkhalid/desktop/consumer_complaints'
-#os.chdir(path)
-
-#################
+class TestCC(unittest.TestCase):
+    
+    def test_rounding_up(self):
+        self.assertEqual(rounding_percent(15.5), 16)
+        self.assertEqual(rounding_percent(15.7), 16 )
+        
+    def test_rounding_down(self):
+        self.assertNotEqual(rounding_percent(15.4), 16)
+             
+########################
 
 def sort_data(list_data):
     return sorted(list_data, key=lambda x: (x[1], x[0], x[2]))
 
-def rounding_int(n):
+def rounding_percent(n):
     if n - math.floor(n) >= 0.5:
         return math.ceil(n)
     return math.floor(n)
 
-def processing_file(data):
-    
-    data_column = []
-    for columns in data[1:]:    
+def column_slicing(input_data):
+    data_columns = []
+    for columns in input_data[1:]:    
         date_received = columns[0]
         product = columns[1]
         company =columns[7]
         list_columns = [date_received, product, company]   
-        data_column.append(list_columns)
-        
-    for list_2 in data_column:
-        date = list_2[0]
+        data_columns.append(list_columns)
+    return data_columns
+            
+def processing_data(data):
+    
+    data = column_slicing(data)    
+    for lst in data:
+        date = lst[0]
         date_split= date.split("-")
         year=date_split[0]    
-        list_2[0]= year
+        lst[0]= year
         
     Dic_output = {}
-    for lst in sort_data(data_column):
+    for lst in sort_data(data):
         if '|'.join(lst[0:2]) in Dic_output:
             company = lst[2]
             Dic_output['|'.join(lst[0:2])].append(company)     
@@ -73,19 +81,12 @@ def processing_file(data):
             highest_complaint = max(complain_num)
     
             complaints_percent = (highest_complaint/complaints)*100
-            complaints_percent = rounding_int(complaints_percent)
-            
-    
-#            if ',' in Product:
-#                Product = '"' + Product + '"'
-#            else:
-#                Product
+            complaints_percent = rounding_percent(complaints_percent)
                 
             csvwriter.writerow([Product, Year, complaints, unique_companies, complaints_percent])
                 
     return csvwriter
-   
-    
+       
 if __name__ == "__main__":
     input_file=sys.argv[1]
     output_file=sys.argv[2]
@@ -93,7 +94,9 @@ if __name__ == "__main__":
     with open(input_file, mode="r") as csv_file:
         reader = csv.reader(csv_file)
         data =list(reader) 
-        processing_file(data)     
+        processing_data(data)  
+   
+        
     
            
         

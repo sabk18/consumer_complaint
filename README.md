@@ -15,11 +15,11 @@ This information is extracted and written to a csv file (report.csv) that is exp
 ## STEPS
 
 1. Modules imported:
-  1. sys
-  2. os
-  3. csv
-  4. collections
-  5. math
+*  sys
+*  os
+*  csv
+*  collections
+*  math
 
 2. The first step was to open the csv file and read it into a list. Only columns that were needed were kept , the header was removed and then stored into a new list called data_column. The columns we choose were : Date received(0) , Product (1) and companies(7). 
 3. Now comes processing the date column. The date was striped at '-' and only the year at index 0 was selected and applied to each list.
@@ -30,10 +30,10 @@ This information is extracted and written to a csv file (report.csv) that is exp
 ## Processing
 
 To process the data as requested some fucntions were kept in mind:
-1. sorting the Product (alphabetically) and Year (ascending)
+1. Sorting the Product (alphabetically) and Year (ascending)
 2. Change the product name to lower case.
 3. Rounding the highest percentage to its whole number (if the decimal is between 0.5 and then round upwards to nearest whole number, if the decimal is less than 0.5 (not included) then round downwards)
-4. if a product has comma then have the product in quotation marks.
+4. If a product has comma between product names , then have the product in quotation marks in the output file.
 
 
 
