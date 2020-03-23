@@ -1,1 +1,1 @@
-This is the directory where my program would export the outpot file : report.csv
+This is the directory where my program would export the output file : report.csv
