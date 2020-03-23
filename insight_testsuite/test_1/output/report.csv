@@ -1,30 +1,17 @@
-bank account or service,2015,1,1,100
-checking or savings account,2018,2,2,50
-checking or savings account,2019,54,24,20
-checking or savings account,2020,8,8,13
-consumer loan,2016,1,1,100
-credit card,2017,1,1,100
-credit card or prepaid card,2018,2,2,50
-credit card or prepaid card,2019,50,17,16
-credit card or prepaid card,2020,11,7,36
-"credit reporting, credit repair services, or other personal consumer reports",2017,2,2,50
-"credit reporting, credit repair services, or other personal consumer reports",2018,32,8,50
-"credit reporting, credit repair services, or other personal consumer reports",2019,431,44,53
-"credit reporting, credit repair services, or other personal consumer reports",2020,93,11,61
-debt collection,2015,1,1,100
-debt collection,2016,4,2,75
-debt collection,2017,3,3,33
-debt collection,2018,5,5,20
-debt collection,2019,148,96,8
-debt collection,2020,30,17,47
-"money transfer, virtual currency, or money service",2019,7,6,29
-"money transfer, virtual currency, or money service",2020,3,1,100
-mortgage,2018,3,3,33
-mortgage,2019,53,31,11
-mortgage,2020,8,6,38
-"payday loan, title loan, or personal loan",2019,7,7,14
-"payday loan, title loan, or personal loan",2020,1,1,100
-student loan,2019,25,13,24
+checking or savings account,2019,5,5,20
+checking or savings account,2020,2,2,50
+credit card or prepaid card,2019,4,4,25
+credit card or prepaid card,2020,3,3,33
+"credit reporting, credit repair services, or other personal consumer reports",2017,1,1,100
+"credit reporting, credit repair services, or other personal consumer reports",2018,3,2,67
+"credit reporting, credit repair services, or other personal consumer reports",2019,97,13,63
+"credit reporting, credit repair services, or other personal consumer reports",2020,27,3,85
+debt collection,2019,26,25,8
+debt collection,2020,16,6,69
+"money transfer, virtual currency, or money service",2019,2,2,50
+mortgage,2018,1,1,100
+mortgage,2019,6,6,17
+"payday loan, title loan, or personal loan",2019,1,1,100
+student loan,2019,3,3,33
 vehicle loan or lease,2018,1,1,100
-vehicle loan or lease,2019,10,9,20
-vehicle loan or lease,2020,1,1,100
+vehicle loan or lease,2019,1,1,100
