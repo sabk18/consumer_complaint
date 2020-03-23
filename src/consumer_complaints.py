@@ -48,12 +48,15 @@ def column_slicing(input_data):
             
 def processing_data(data):
     
-    data = column_slicing(data)    
+    data = column_slicing(data)    #date formatting 
     for lst in data:
         date = lst[0]
-        date_split= date.split("-")
-        year=date_split[0]    
-        lst[0]= year
+        if date != '':
+            date_split= date.split("-")
+            year=date_split[0]    
+            lst[0]= year
+        else:
+            lst[0] ='NaN'
         
     Dic_output = {}
     for lst in sort_data(data):
