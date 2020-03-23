@@ -4,7 +4,7 @@
 Identify the number of complaints for unique pairs of product and year and how these complaints are spread over companies. 
 
 ## Tasks
-This Python script reads each row of the input file (complaints.csv) and does the following:
+This Python script (consumer_complaints.py) reads each row of the input file (complaints.csv) and does the following:
 1. identifies unique pairs of product and year.
 2. The total number of complaints for that product and year
 3. Total number of companies receiving at least one complaint for that product and year
@@ -38,7 +38,7 @@ To process the data as requested some test cases were kept in mind:
 ## Testing
 
 I used unittest to test for fucntion:rounding_percent with test cases of assertEqual and asssertNotEqual.
-The test can be run from cmd and inside the src dir by using 'python -m unittest company_complaints.py'
+The test can be run from cmd and inside the src dir by using 'python -m unittest consumer_complaints.py'
 
 As requested by the challenge, two tests were done on chunks of complaints.csv to test and compare the export.csv with the expected output.
 The test was also executed on the link that was provided and the code successfully passed all 3 tests.
