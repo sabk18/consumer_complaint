@@ -40,7 +40,7 @@ To process the data as requested some test cases were kept in mind:
 I used unittest to test for fucntion:rounding_percent with test cases of assertEqual and asssertNotEqual.
 The test can be run from cmd and inside the src dir by using 'python -m unittest consumer_complaints.py'
 
-As requested by the challenge, two tests were done on chunks of complaints.csv to test and compare the export.csv with the expected output.
+As requested by the challenge, two tests were done on chunks of complaints.csv to test and compare the export.csv with the expected output. One test_date checks if missing date value is replaced by NaN. The output is as expected.
 The test was also executed on the link that was provided and the code successfully passed all 3 tests.
 
 
