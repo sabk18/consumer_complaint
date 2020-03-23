@@ -29,13 +29,19 @@ This information is extracted and written to a csv file (report.csv) that is exp
 
 ## Processing
 
-To process the data as requested some fucntions were kept in mind:
+To process the data as requested some test cases were kept in mind:
 1. Sorting the Product (alphabetically) and Year (ascending)
 2. Change the product name to lower case.
 3. Rounding the highest percentage to its whole number (if the decimal is between 0.5 and then round upwards to nearest whole number, if the decimal is less than 0.5 (not included) then round downwards)
-4. If a product has comma between product names , then have the product in quotation marks in the output file.
+4. If a product has a comma between product names , then have the product in quotation marks in the output file.
 
+## Testing
 
+I used unittest to test for fucntion:rounding_percent with test cases of assertTrue and asssertNotTrue.
+The test can be run from cmd and inside the src dir by using 'python -m unittest company_complaints.py'
+
+As requested by the challenge, two tests were done on chunks of complaints.csv to test and compare the export.csv with the expected output.
+The test was also executed on the link that was provided and the code successfully passed all 3 tests.
 
 
 
